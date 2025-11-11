@@ -1,0 +1,62 @@
+/* app/globals.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Estilos base para el tema claro */
+body {
+  background-color: #f9fafb; /* bg-gray-50 */
+  color: #111827; /* text-gray-900 */
+}
+
+/* Estilos para el tema oscuro */
+.dark body {
+  background-color: #111827; /* bg-gray-900 */
+  color: #f3f4f6; /* text-gray-100 */
+}
+
+/* Fondos por módulo */
+.bg-modulo-a {
+  background: linear-gradient(135deg, #1a2a6c 0%, #2a4b8c 50%, #3a6bcc 100%);
+}
+
+.bg-modulo-b {
+  background: linear-gradient(135deg, #2c3e50 0%, #4a6b8c 50%, #6a9bcc 100%);
+}
+
+.bg-default {
+  background: linear-gradient(135deg, #3a3a3a 0%, #5a5a5a 50%, #7a7a7a 100%);
+}
+
+/* Asegurar que el contenido sea legible sobre los fondos */
+.bg-modulo-a .card,
+.bg-modulo-b .card,
+.bg-default .card {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.dark .bg-modulo-a .card,
+.dark .bg-modulo-b .card,
+.dark .bg-default .card {
+  background-color: rgba(20, 20, 20, 0.95);
+}
+
+/* Mejora de legibilidad para el contenido sobre fondos con imagen */
+.card, .chart-container, .kpi-box {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card, 
+.dark .chart-container, 
+.dark .kpi-box {
+  background-color: rgba(20, 20, 20, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Transiciones suaves para cambios de fondo */
+body, .card, .chart-container {
+  transition: background-color 0.3s ease;
+}
